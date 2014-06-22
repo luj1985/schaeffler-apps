@@ -28,12 +28,12 @@ define(['jquery', 'backbone', 'underscore',
       var model = this.model;
       $(this.el).html([
         '<td><input type="text" class="app-name" value="' + model.get('name') + '"/></td>',
-        '<td><input type="text" class="app-filename" value="' + model.get('filename') + '"/></td>',
         '<td>',
           '<input type="text" class="app-location" value="' + model.get('location') + '" disabled/>',
           '<span class="app-progress"></span>',
           '<input type="file" class="app-upload" />',
         '</td>',
+        '<td><input type="text" class="app-filename" value="' + model.get('filename') + '"/></td>',
         '<td>' + model.get('count') + '</td>',
         '<td colspan="2"><a class="btn btn-primary btn-xs finish">完成</a></td>'
       ].join(''));
@@ -74,8 +74,8 @@ define(['jquery', 'backbone', 'underscore',
     render : function() {
       $(this.el).html([
         '<td>' + this.model.get('name') + '</td>',
-        '<td>' + this.model.get('filename') + '</td>',
         '<td>' + this.model.get('location') + '</td>',
+        '<td>' + this.model.get('filename') + '</td>',
         '<td>' + this.model.get('count') + '</td>',
         '<td><a class="btn btn-primary btn-xs edit">编辑</a></td>'
       ].join(''));

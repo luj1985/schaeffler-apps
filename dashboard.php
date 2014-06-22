@@ -14,8 +14,8 @@
     <table id="files" class="table table-striped table-hover table-condensed">
       <thead>
         <th>名字</th>
-        <th>下载文件名</th>
         <th>存储位置</th>
+        <th>下载文件名</th>
         <th>下载次数</th>
         <th></th>
       </thead>
