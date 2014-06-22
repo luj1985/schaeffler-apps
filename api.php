@@ -31,33 +31,34 @@ $app->group('/admin/api', function() use ($app, $db) {
     }
   });
   
-  $app->post('/files', function () use ($db, $app) {
-    $sth = $db->prepare('INSERT INTO files (name, filename, location) VALUES (?, ?, ?);');
-    $sth->execute([ 
-      $app->request()->params('name'), 
-      $app->request()->params('filename'), 
-      $app->request()->params('location')
-    ]);
-    echo json_encode([
-      'action' => 'add',
-      'success' => $sth->rowCount() == 1,
-      'id' => $db->lastInsertId(),
-    ]);
-  });
-
-  $app->delete('/files/:id', function($id) use ($db) {
-    $sth = $db->prepare('delete from files where id = ?;');
-    $sth->execute([intval($id)]);
-    
-    echo json_encode([
-      'action' => 'delete',
-      'success' => $sth->rowCount() == 1,
-      'id' => $id
-    ]);
-  });
+//  $app->post('/files', function () use ($db, $app) {
+//    $sth = $db->prepare('INSERT INTO files (name, filename, location) VALUES (?, ?, ?);');
+//    $json = json_decode($app->request()->getBody());
+//    $sth->execute([ 
+//      $json->name,
+//      $json->filename,
+//      $json->location
+//    ]);
+//    echo json_encode([
+//      'action' => 'add',
+//      'success' => $sth->rowCount() == 1,
+//      'id' => $db->lastInsertId(),
+//    ]);
+//  });
+//
+//  $app->delete('/files/:id', function($id) use ($db) {
+//    $sth = $db->prepare('delete from files where id = ?;');
+//    $sth->execute([intval($id)]);
+//    
+//    echo json_encode([
+//      'action' => 'delete',
+//      'success' => $sth->rowCount() == 1,
+//      'id' => $id
+//    ]);
+//  });
   
   $app->put('/files/:id', function($id) use ($db, $app) {
-    $sth = $db->prepare('update files SET name = ?, filename = ?, location = ? WHERE id = ?;');
+    $sth = $db->prepare('update files set name = ?, filename = ?, location = ? WHERE id = ?;');
     $json = json_decode($app->request()->getBody());
     
     $sth->execute([
