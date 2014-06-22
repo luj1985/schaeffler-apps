@@ -2,9 +2,11 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Admin Console</title>
-  <link rel="stylesheet" type="text/css" href="../components/require.css" />
-  <script src="../components/require.js"></script>
+  <link rel="stylesheet" type="text/css" href="components/require.css" />
+  <script src="components/require.js"></script>
 </head>
 
 <body>

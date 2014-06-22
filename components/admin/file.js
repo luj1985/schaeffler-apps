@@ -31,13 +31,14 @@ define(['jquery', 'backbone', 'underscore',
         '<td><input type="text" class="app-filename" value="' + model.get('filename') + '"/></td>',
         '<td>',
           '<input type="text" class="app-location" value="' + model.get('location') + '" disabled/>',
-          '<div id="progress"></div>',
+          '<span class="app-progress"></span>',
           '<input type="file" class="app-upload" />',
         '</td>',
         '<td>' + model.get('count') + '</td>',
         '<td colspan="2"><a class="btn btn-primary btn-xs finish">完成</a></td>'
       ].join(''));
-      $progress = this.$('#progress');
+      
+      $progress = this.$('.app-progress');
       
       var view = this;
       this.$('.app-upload').fileupload({

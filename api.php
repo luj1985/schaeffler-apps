@@ -3,6 +3,14 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\Slim();
 $app->contentType('application/json');
+$app->add(new \Slim\Middleware\HttpBasicAuth(array(
+  "path" => "/admin",
+  "realm" => "Schaeffler Protected",
+  "users" => array(
+    "root" => "t00r",
+    "user" => "passw0rd"
+  )
+)));
 $db = new PDO('sqlite:db/schaeffler_apps.db');
 
 $app->group('/admin/api', function() use ($app, $db) {

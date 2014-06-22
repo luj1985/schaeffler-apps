@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1137997d3376f84bc77a29769a253cde",
+    "hash": "1c87e6e358d3e7866acbdb4a920e6eca",
     "packages": [
         {
             "name": "components/backbone",
@@ -484,12 +484,59 @@
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
             "time": "2014-06-18 11:43:36"
+        },
+        {
+            "name": "tuupola/slim-basic-auth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tuupola/slim-basic-auth.git",
+                "reference": "53f9086360f1e1f55637d1b7f8e1dd7e49d88f46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tuupola/slim-basic-auth/zipball/53f9086360f1e1f55637d1b7f8e1dd7e49d88f46",
+                "reference": "53f9086360f1e1f55637d1b7f8e1dd7e49d88f46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "slim/slim": ">=2.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Slim\\Middleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mika Tuupola",
+                    "email": "tuupola@appelsiini.net",
+                    "homepage": "http://www.appelsiini.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "HTTP Basic Authentication Middleware for Slim Framework",
+            "homepage": "https://github.com/tuupola/slim-basic-auth",
+            "keywords": [
+                "auth",
+                "middleware",
+                "slim"
+            ],
+            "time": "2014-05-23 11:38:51"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "tuupola/slim-basic-auth": 20
+    },
     "platform": [],
     "platform-dev": []
 }

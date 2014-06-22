@@ -8,6 +8,7 @@
     }],
   "require": {
     "slim/slim": "2.*",
+    "tuupola/slim-basic-auth": "dev-master",
     "components/jquery": "2.1.0",
     "components/backbone": "1.1.0",
     "components/bootstrap-default": "3.1.1"

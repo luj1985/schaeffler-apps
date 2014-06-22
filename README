@@ -1,13 +1,39 @@
-required PHP module:
+安装
+====
 
-1. openssl.so
-2. phar.so
-3. iconv.so
-4. http.so
-5. sqlite3.so
-6. pdo_sqlite.so
+启用PHP模块
+----------
 
+* openssl.so
+* phar.so
+* iconv.so
+* http.so
+* sqlite3.so
+* pdo_sqlite.so
 
-Installation:
+安装Composer
+-----------
+使用[Composer](http://getcomposer.org/)来安装项目依赖。
+    composer install
+    
 
-启用PHP模块后，安装Composer
+结构介绍
+=======
+
+api.php
+  是后台管理用到的REST API，包括文件上传，文件名的更新等。
+
+dashboard.php
+  是后台管理的界面。使用Backbone.js来渲染html，以及调用对应的API
+  
+download.php
+  暴露给终端用户的界面，会有连个下载链接，分别对应iPhone版和android版
+  
+index.php
+  初始化REST API
+  
+配置
+====
+
+REST API使用HTTP Basic Authentication来验证用户身份。用户名合密码为hard coded，
+可以在dashboard.php文件中找到。
