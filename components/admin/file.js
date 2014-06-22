@@ -59,6 +59,9 @@ define(['jquery', 'backbone', 'underscore',
           if (progress === 100) {
             $progress.html('');
           }
+        },
+        error : function(jqXHR, textStatus, errorThrown) {
+          alert(errorThrown);
         }
       });
     },
