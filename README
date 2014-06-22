@@ -1,0 +1,13 @@
+required PHP module:
+
+1. openssl.so
+2. phar.so
+3. iconv.so
+4. http.so
+5. sqlite3.so
+6. pdo_sqlite.so
+
+
+Installation:
+
+启用PHP模块后，安装Composer

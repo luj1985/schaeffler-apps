@@ -1,0 +1,16 @@
+{
+  "name": "luj1985/schaeffler-apps",
+  "description": "This project is used to count schaeffler mobile apps download times",
+  "license": "MIT",
+  "authors": [{
+    "name": "Lu,Jun",
+    "email": "luj1985@gmail.com"
+    }],
+  "require": {
+    "slim/slim": "2.*",
+    "components/jquery": "2.1.0",
+    "components/backbone": "1.1.0",
+    "components/bootstrap-default": "3.1.1"
+  },
+  "minimum-stability": "dev"
+}

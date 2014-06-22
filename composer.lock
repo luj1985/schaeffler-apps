@@ -1,0 +1,495 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "1137997d3376f84bc77a29769a253cde",
+    "packages": [
+        {
+            "name": "components/backbone",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/backbone.git",
+                "reference": "4d3d6ebfa14add6cd917cc380e889844be31f681"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/backbone/zipball/4d3d6ebfa14add6cd917cc380e889844be31f681",
+                "reference": "4d3d6ebfa14add6cd917cc380e889844be31f681",
+                "shasum": ""
+            },
+            "require": {
+                "components/underscore": ">=1.4.3"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "backbone.js"
+                    ],
+                    "files": [
+                        "backbone-min.js"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "underscore"
+                        ],
+                        "exports": "Backbone"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Ashkenas",
+                    "email": "jeremy@documentcloud.org"
+                }
+            ],
+            "description": "Give your JS App some Backbone with Models, Views, Collections, and Events.",
+            "homepage": "http://backbonejs.org",
+            "keywords": [
+                "browser",
+                "client",
+                "controller",
+                "model",
+                "router",
+                "server",
+                "view"
+            ],
+            "time": "2013-12-13 12:10:45"
+        },
+        {
+            "name": "components/bootstrap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/bootstrap.git",
+                "reference": "32034b461f8186ace7dd2b08f07b549f831fde96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/bootstrap/zipball/32034b461f8186ace7dd2b08f07b549f831fde96",
+                "reference": "32034b461f8186ace7dd2b08f07b549f831fde96",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.9"
+            },
+            "suggest": {
+                "components/bootstrap-default": "Provide a theme for Bootstrap as components/bootstrap only provides the CSS as file assets"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "js/bootstrap.js"
+                    ],
+                    "files": [
+                        "js/bootstrap.min.js",
+                        "css/*.css",
+                        "fonts/*",
+                        "less/*"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "jquery"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Twitter, Inc"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2014-04-17 12:33:39"
+        },
+        {
+            "name": "components/bootstrap-default",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/bootstrap-default.git",
+                "reference": "bce255dfe1a9cb0ce96659fc3785b4ce6a0ff695"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/bootstrap-default/zipball/bce255dfe1a9cb0ce96659fc3785b4ce6a0ff695",
+                "reference": "bce255dfe1a9cb0ce96659fc3785b4ce6a0ff695",
+                "shasum": ""
+            },
+            "require": {
+                "components/bootstrap": "*",
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "styles": [
+                        "css/bootstrap.css",
+                        "css/bootstrap-theme.css"
+                    ],
+                    "files": [
+                        "css/bootstrap.min.css",
+                        "css/bootstrap-theme.min.css",
+                        "fonts/*"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "bootstrap"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Twitter, Inc"
+                }
+            ],
+            "description": "Shim repository for the default theme for Bootstrap.",
+            "homepage": "http://twitter.github.com/bootstrap/",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2014-04-04 21:07:20"
+        },
+        {
+            "name": "components/jquery",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "099ad075783a6189f13c1e742e03f9cc95654a27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/099ad075783a6189f13c1e742e03f9cc95654a27",
+                "reference": "099ad075783a6189f13c1e742e03f9cc95654a27",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery-migrate.js",
+                        "jquery-migrate.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Resig",
+                    "email": "jeresig@gmail.com",
+                    "homepage": "http://ejohn.org/"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2014-01-24 19:52:32"
+        },
+        {
+            "name": "components/underscore",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/underscore.git",
+                "reference": "5319dd48d877d8c1ad217ec7851e840d0065c25f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/underscore/zipball/5319dd48d877d8c1ad217ec7851e840d0065c25f",
+                "reference": "5319dd48d877d8c1ad217ec7851e840d0065c25f",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "underscore.js"
+                    ],
+                    "files": [
+                        "underscore-min.js",
+                        "underscore-min.map"
+                    ],
+                    "shim": {
+                        "exports": "_"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Ashkenas",
+                    "email": "jeremy@documentcloud.org"
+                }
+            ],
+            "description": "JavaScript's functional programming helper library.",
+            "homepage": "http://underscorejs.org",
+            "keywords": [
+                "browser",
+                "client",
+                "functional",
+                "server",
+                "util"
+            ],
+            "time": "2014-01-13 12:26:44"
+        },
+        {
+            "name": "kriswallsmith/assetic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/assetic.git",
+                "reference": "964340e69361802eddf51e8eaa85acbd1c621edf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/964340e69361802eddf51e8eaa85acbd1c621edf",
+                "reference": "964340e69361802eddf51e8eaa85acbd1c621edf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "symfony/process": "~2.1"
+            },
+            "require-dev": {
+                "cssmin/cssmin": "*",
+                "joliclic/javascript-packer": "*",
+                "kamicane/packager": "*",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "leafo/scssphp-compass": "*",
+                "mrclay/minify": "*",
+                "patchwork/jsqueeze": "*",
+                "phpunit/phpunit": "~3.7",
+                "psr/log": "~1.0",
+                "ptachoire/cssembed": "*",
+                "twig/twig": "~1.6"
+            },
+            "suggest": {
+                "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
+                "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
+                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin",
+                "patchwork/jsqueeze": "Assetic provides the integration with the JSqueeze JavaScript compressor",
+                "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
+                "twig/twig": "Assetic provides the integration with the Twig templating engine"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Assetic": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Asset Management for PHP",
+            "homepage": "https://github.com/kriswallsmith/assetic",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ],
+            "time": "2014-05-05 12:59:42"
+        },
+        {
+            "name": "robloach/component-installer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobLoach/component-installer.git",
+                "reference": "c2e456e7644885f786169e52f590719aa5a8a7d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/c2e456e7644885f786169e52f590719aa5a8a7d8",
+                "reference": "c2e456e7644885f786169e52f590719aa5a8a7d8",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0",
+                "kriswallsmith/assetic": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "1.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "ComponentInstaller\\Installer"
+            },
+            "autoload": {
+                "psr-0": {
+                    "ComponentInstaller": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Loach",
+                    "email": "robloach@gmail.com",
+                    "homepage": "http://robloach.net"
+                }
+            ],
+            "description": "Allows installation of Components via Composer.",
+            "time": "2013-09-08 14:10:00"
+        },
+        {
+            "name": "slim/slim",
+            "version": "2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeguy/Slim.git",
+                "reference": "4906b77a07c7bd6ff1a99aea903e940a2d4fa106"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeguy/Slim/zipball/4906b77a07c7bd6ff1a99aea903e940a2d4fa106",
+                "reference": "4906b77a07c7bd6ff1a99aea903e940a2d4fa106",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-mcrypt": "Required for HTTP cookie encryption"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Slim": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Lockhart",
+                    "email": "info@joshlockhart.com",
+                    "homepage": "http://www.joshlockhart.com/"
+                }
+            ],
+            "description": "Slim Framework, a PHP micro framework",
+            "homepage": "http://github.com/codeguy/Slim",
+            "keywords": [
+                "microframework",
+                "rest",
+                "router"
+            ],
+            "time": "2014-04-05 18:33:59"
+        },
+        {
+            "name": "symfony/process",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Process",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Process.git",
+                "reference": "0c367d63ab161bfc757e5e882a1d9dde8d344be3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/0c367d63ab161bfc757e5e882a1d9dde8d344be3",
+                "reference": "0c367d63ab161bfc757e5e882a1d9dde8d344be3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Process\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-06-18 11:43:36"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "platform": [],
+    "platform-dev": []
+}
