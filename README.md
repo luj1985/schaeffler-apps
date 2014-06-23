@@ -38,4 +38,4 @@ index.php
 ---
 
 REST API使用HTTP Basic Authentication来验证用户身份。
-用户名和密码可以在dashboard.php文件中找到。
+用户名和密码可以在index.php文件中找到。
