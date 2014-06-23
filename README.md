@@ -22,10 +22,6 @@ schaeffler-apps
 代码结构说明
 ----------
 
-api.php
-
-  是后台管理用到的REST API，包括文件上传，文件名的更新等。
-
 dashboard.php
 
   是后台管理的界面。使用Backbone.js来渲染html，以及调用对应的REST API
@@ -36,10 +32,10 @@ download.php
   
 index.php
 
-  初始化REST API
+  系统用到的REST API，包括文件上传，文件名更新等。
   
 配置
 ---
 
 REST API使用HTTP Basic Authentication来验证用户身份。
-用户名合密码为hard coded，可以在dashboard.php文件中找到。
+用户名和密码可以在dashboard.php文件中找到。
