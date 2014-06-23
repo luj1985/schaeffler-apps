@@ -40,11 +40,12 @@ $app->group('/admin/api', function() use ($app, $db) {
 
   $app->get('/files/:id', function($id) use ($app,$db) {
     $sth = $db->prepare('select * from files where id = ? limit 1;');
-    $sth->execute([intval($id)]);
+    $sth->execute(array(intval($id)));
     $rs = $sth->fetchAll(PDO::FETCH_CLASS);
     if ($rs) {
       echo json_encode($rs[0]);
     } else {
+      $app->contentType('text/html');
       $app->pass(); // 404
     }
   });
@@ -79,33 +80,35 @@ $app->group('/admin/api', function() use ($app, $db) {
     $sth = $db->prepare('update files set name = ?, filename = ?, location = ? WHERE id = ?;');
     $json = json_decode($app->request()->getBody());
     
-    $sth->execute([
+    $sth->execute(array(
       $json->name,
       $json->filename,
       $json->location,
       intval($id),
-    ]);
-    echo json_encode([
+    ));
+    echo json_encode(array(
       'action' => 'edit',
       'success' => $sth->rowCount() == 1,
       'id' => $id
-    ]);
+    ));
   });
   
   $app->post('/upload', function() {
     if ($_FILES["file"]["error"] > 0) {
       echo 'has error';
-      echo json_encode([
+      echo json_encode(array(
         'success' => false,
         'message' => 'Invalid file'
-      ]);
+      ));
     } else {
       $upload_dir = './uploads';
       $filename = $_FILES["file"]["name"];
       $file_path = $_FILES["file"]["tmp_name"];
       $new_file_path = "$upload_dir/$filename";      
       move_uploaded_file($file_path, $new_file_path);            
-      echo json_encode([ 'filename' => $filename, 'location' => $new_file_path ]);
+      echo json_encode(array( 
+        'filename' => $filename, 
+        'location' => $new_file_path ));
     }
   });
 });
