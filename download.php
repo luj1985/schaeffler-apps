@@ -1,6 +1,6 @@
 <?php
-$dbh = new PDO('sqlite:db/schaeffler_apps.db');
-$dbh->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$db = new PDO('sqlite:db/schaeffler_apps.db');
+$db->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $dbh->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
   <body>
 <?php
   echo '<ul>';
-  $files = $dbh->query ( 'select * from files' );
+  $files = $db->query ( 'select * from files' );
   foreach ( $files as $row ) {
     echo '<li>';
     $id = $row['id'];
@@ -24,5 +24,5 @@ $dbh->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 </html>
 
 <?php
-$dbh = null;
+$db = null;
 ?>

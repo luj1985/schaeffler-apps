@@ -111,4 +111,6 @@ $app->group('/admin/api', function() use ($app, $db) {
 });
 
 $app->run();
+
+$db = null;
 ?>
